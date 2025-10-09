@@ -1,0 +1,271 @@
+/* Header Layout */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, #fafafa, #f3f3f3);
+  padding: 2rem 1rem;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Logo */
+.logo {
+  color: red; /* logo color */
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+/* Navigation */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: red;
+}
+
+/* Hero Section */
+.hero-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.hero-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.hero-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Button */
+.hero-btn {
+  display: inline-block;
+  background: red;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: rgb(25, 0, 139);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+/* MAIN CONTAINER */
+.main-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* SECTION TITLES */
+.main-container .title,
+.article-title {
+  color: #222;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: red; /* matches your brand */
+}
+
+/* ARTICLE WRITE-UP (Top Section) */
+.article-card:first-of-type {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.article-card:first-of-type .article-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.article-card:first-of-type .article-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ARTICLE GALLERY - Overlay Style */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* ARTICLE CARD */
+.gallery .article-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 400px;
+  background: #000;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery .article-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* IMAGE */
+.gallery .article-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: transform 0.5s ease;
+}
+
+.gallery .article-card:hover img {
+  transform: scale(1.05);
+}
+
+/* OVERLAY GRADIENT */
+.gallery .article-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+  z-index: 1;
+}
+
+/* TEXT OVERLAY */
+.gallery .article-card h2,
+.gallery .article-card p {
+  position: relative;
+  z-index: 2;
+  padding: 0 1.5rem;
+}
+
+.gallery .article-card h2 {
+  position: absolute;
+  bottom: 4rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.gallery .article-card p {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  font-size: 0.9rem;
+  color: #f1f1f1;
+  line-height: 1.4;
+}
+
+/* Optional: truncate long text */
+.gallery .article-card p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* limits lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .gallery .article-card {
+    height: 320px;
+  }
+
+  .gallery .article-card h2 {
+    font-size: 1.1rem;
+    bottom: 3.5rem;
+  }
+
+  .gallery .article-card p {
+    font-size: 0.85rem;
+    -webkit-line-clamp: 2;
+  }
+}
+
+/* OTHER ARTICLES */
+article {
+  background: #f7f7f7;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-top: 2px solid #eee;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .article-card:first-of-type {
+    padding: 1.5rem;
+  }
+
+  .article-card:first-of-type .article-title {
+    font-size: 1.5rem;
+  }
+
+  .gallery .article-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .gallery .article-card img {
+    height: 180px;
+  }
+}
