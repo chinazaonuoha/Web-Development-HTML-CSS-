@@ -1,0 +1,107 @@
+/* ===== UNIVERSAL HERO BASE ===== */
+.hero-section {
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 6rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: heroZoom 20s ease-in-out infinite alternate;
+}
+
+/* Fade-in for content */
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slow background zoom animation */
+@keyframes heroZoom {
+  from {
+    background-size: 100%;
+  }
+  to {
+    background-size: 110%;
+  }
+}
+
+/* Headline & Text */
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  line-height: 1.3;
+}
+
+.hero-text {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+/* Button */
+.hero-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: #0077ff;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #005ecc;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 4rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+}
+
+
+
+/* 🎓 Article Page */
+.hero-article {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+    url("asset/edu.png");
+}
+
+/* 🏠 Home Page */
+.hero-home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+    url("image/home-hero.jpg");
+}
+
+/* 💡 About Page */
+.hero-about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+    url("image/about-hero.jpg");
+}
