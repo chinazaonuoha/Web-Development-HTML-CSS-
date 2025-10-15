@@ -7,46 +7,163 @@
     <title>GitHub Hosting</title>
     <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png">
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/css/index.css">
 
 </head>
 <body>
-    <header id="mobile" class="header">
+ <header id="mobile" class="header">
+    <!-- LOGO -->
+    <div class="logo">
+      <a href="index.html">
+        <img src="image/favicon-16x16.png" alt="Logo" />
+      </a>
+    </div>
+
+    <!-- NAVIGATION LINKS -->
     <nav class="navigation-menu">
-        <!-- LOGO -->
-        <div class="logo">
-        <a href="index.html">
-            <img src="/image/favicon-16x16.png" alt="Devespace Logo" />
-        </a>
-        </div>
-
-        <!-- NAVIGATION LINKS -->
-        <ul class="navigation-items">
-        <li class="navigation-list-item">
-            <a href="index.html" class="navigation-link-item active">Home</a>
-        </li>
-        <li class="navigation-list-item">
-            <a href="article.html" class="navigation-link-item">Article</a>
-        </li>
-        </ul>
+      <ul class="navigation-items">
+        <li><a href="index.html" class="navigation-link-item">Home</a></li>
+        <li><a href="article.html" class="navigation-link-item">Article</a></li>
+      </ul>
     </nav>
-</header>
+
+    <!-- SIGNUP BUTTON -->
+    <a href="form.html" class="signup-btn">Sign Up</a>
+
+    <!-- HAMBURGER ICON -->
+    <div class="hamburger" id="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </header>
+
+  <!-- SIDE SLIDE MENU -->
+  <div class="side-menu" id="sideMenu">
+    <a href="index.html">Home</a>
+    <a href="article.html">Article</a>
+    <a href="form.html">Sign Up</a>
+  </div>
 
 
 
 
 
 
-    <!-- <h1>
-         Hello Web <strong> GitHub Pages Hosting</strong>
-    </h1>
-    <h1>Tools</h1>
    
-    <p>Workflow → Version Control → VS Code → Live Server → Git & GitHub → GitHub Pages → Lighthouse.</p> -->
+<section class="hero-section hero-home">
+  <div class="hero-content">
+    <h1 class="hero-title">
+      Hello Web <strong>GitHub Pages Hosting</strong>
+    </h1>
 
+    <h2 class="hero-subtitle">Tools</h2>
 
+    <p class="hero-text">
+      Workflow → Version Control → VS Code → Live Server → Git & GitHub → GitHub Pages → Lighthouse
+    </p>
+
+   <div class="tools-container">
+  <button class="scroll-btn left">&#10094;</button> <!-- Left arrow -->
   
+  <div class="tools-wrapper">
+    <div class="tools-grid">
+      <div class="tool-card">
+        <img src="asset/workflow.png" alt="Workflow" />
+        <p>Workflow</p>
+      </div>
+      <div class="tool-card">
+        <img src="asset/version-control.png" alt="Version Control" />
+        <p>Version Control</p>
+      </div>
+      <div class="tool-card">
+        <img src="asset/" alt="VS Code" />
+        <p>VS Code</p>
+      </div>
+      <div class="tool-card">
+        <img src="asset/workflow.png" alt="Live Server" />
+        <p>Live Server</p>
+      </div>
+      <div class="tool-card">
+        <img src="asset/github.png" alt="GitHub" />
+        <p>Git & GitHub</p>
+      </div>
+      <div class="tool-card">
+        <img src="asset/hosting.png" alt="GitHub Pages" />
+        <p>GitHub Pages</p>
+      </div>
+      <div class="tool-card">
+        <img src="asset/lighthouse.png" alt="Lighthouse" />
+        <p>Lighthouse</p>
+      </div>
+    </div>
+  </div>
 
+  <button class="scroll-btn right">&#10095;</button> <!-- Right arrow -->
+</div>
+
+</section>
+
+
+
+
+<main class="workflow-section">
+  <h2 class="section-title">Developer Workflow Guide</h2>
+  <div class="workflow-grid">
+
+    <!-- 1. Workflow -->
+    <div class="workflow-card">
+      <img src="asset/workflow.png" alt="Workflow Planning">
+      <h3>Workflow</h3>
+      <p>Define project goals, scope, and deliverables. Break tasks into smaller pieces using tools like <strong>Notion</strong> or <strong>Trello</strong> to keep everything organized.</p>
+    </div>
+
+    <!-- 2. Version Control -->
+    <div class="workflow-card">
+      <img src="asset/version-control.png" alt="Version Control">
+      <h3>Version Control</h3>
+      <p>Track and manage changes in your project with <strong>Git</strong>. Collaborate safely without overwriting files or losing progress.</p>
+    </div>
+
+    <!-- 3. VS Code -->
+    <div class="workflow-card">
+      <img src="asset/workflow.png" alt="VS Code">
+      <h3>VS Code</h3>
+      <p>Use <strong>Visual Studio Code</strong> for clean coding, debugging, and project management with extensions that improve productivity.</p>
+    </div>
+
+    <!-- 4. Live Server -->
+    <div class="workflow-card">
+      <img src="asset/hosting.png" alt="Live Server">
+      <h3>Live Server</h3>
+      <p>Preview your webpage instantly in the browser as you code. Save time and improve accuracy while developing your site.</p>
+    </div>
+
+    <!-- 5. Git & GitHub -->
+    <div class="workflow-card">
+      <img src="asset/github.png" alt="Git and GitHub">
+      <h3>Git & GitHub</h3>
+      <p>Push your project online, collaborate with others, and maintain version history using <strong>GitHub</strong> repositories.</p>
+    </div>
+
+    <!-- 6. GitHub Pages -->
+    <div class="workflow-card">
+      <img src="asset/hosting.png" alt="GitHub Pages">
+      <h3>GitHub Pages</h3>
+      <p>Host your static website directly from GitHub for free. It’s perfect for portfolios and project demos.</p>
+    </div>
+
+    <!-- 7. Lighthouse -->
+    <div class="workflow-card">
+      <img src="asset/lighthouse.png" alt="Lighthouse">
+      <h3>Lighthouse</h3>
+      <p>Test your site’s performance, accessibility, and SEO using <strong>Google Lighthouse</strong> for better optimization and quality.</p>
+    </div>
+
+  </div>
+</main>
+  
+<script src="/js/index.js"></script>
 </body>
 
 </html>
